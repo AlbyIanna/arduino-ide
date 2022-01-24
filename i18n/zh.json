@@ -108,7 +108,7 @@
             "installNow": "必须为当前选定的{2}开发板板安装{0}{1}内核。你想现在安装吗？",
             "configDialogTitle": "选择其他开发板和端口",
             "configDialog1": "如果要上传项目，请选择开发板和端口。",
-            "configDialog2": "如果你只选择开发板，那么只能编译，不能上传项目。",
+            "configDialog2": "If you only select a Board you will be able to compile, but not to upload your sketch.",
             "pleasePickBoard": "请选择要连接的开发板。",
             "showAllAvailablePorts": "启用时显示所有可用端口",
             "programmer": "编程器",
@@ -173,7 +173,7 @@
             "showFolder": "显示项目文件夹",
             "sketch": "项目",
             "moving": "移动",
-            "movingMsg": "文件{0}需要在{1}的项目文件夹中。\n创建此文件夹，移动文件，然后继续？",
+            "movingMsg": "The file \"{0}\" needs to be inside a sketch folder named \"{1}\".\nCreate this folder, move the file, and continue?",
             "cantOpen": "文件夹\"{0}\"已存在。无法打开项目。",
             "saveFolderAs": "将项目文件夹另存为。。。",
             "sketchbook": "项目文件夹",
@@ -243,14 +243,14 @@
             "noSupportedBoardConnected": "未连接受支持的开发板"
         },
         "firmware": {
-            "updater": "WiFi101/WiFiNINA固件更新程序",
+            "updater": "WiFi101 / WiFiNINA Firmware Updater",
             "selectBoard": "选择开发板",
             "checkUpdates": "检查更新",
             "selectVersion": "选择固件版本",
             "install": "安装",
             "overwriteSketch": "安装将覆盖开发板上的项目。",
             "installingFirmware": "安装固件",
-            "successfullyInstalled": "固件已成功安装。",
+            "successfullyInstalled": "Firmware successfully installed.",
             "failedInstall": "安装失败。请再试一次。"
         },
         "dialog": {
@@ -269,7 +269,7 @@
             "carriageReturn": "回车",
             "newLineCarriageReturn": "NL 和 CR",
             "notConnected": "没有连接。选择要自动连接的开发板和端口。",
-            "message": "消息（{0} + Enter 将消息发送到{2}上的{1}",
+            "message": "Message ({0} + Enter to send message to '{1}' on '{2}')",
             "connectionBusy": "连接失败。串行端口被占用：{0}",
             "disconnected": "已断开{0}与{1}的连接。",
             "unexpectedError": "意外错误。正在重新连接端口{1}上的{0}。",

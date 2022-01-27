@@ -9,7 +9,6 @@ env:
 
 jobs:
   create-changelog:
-    if: github.repository == 'arduino/arduino-ide'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,14 +31,14 @@ jobs:
           echo "$CHANGELOG_FILE_NAME" >> "${{ github.workspace }}/${{ env.CHANGELOG_ARTIFACTS }}/latest.txt"
 
           # Compose changelog
-          yarn run compose-changelog "${{ github.workspace }}/${{ env.CHANGELOG_ARTIFACTS }}/$CHANGELOG_FILE_NAME"
+          # yarn run compose-changelog "${{ github.workspace }}/${{ env.CHANGELOG_ARTIFACTS }}/$CHANGELOG_FILE_NAME"
 
-      - name: Publish Changelog [S3]
-        uses: docker://plugins/s3
-        env:
-          PLUGIN_SOURCE: '${{ env.CHANGELOG_ARTIFACTS }}/*'
-          PLUGIN_STRIP_PREFIX: '${{ env.CHANGELOG_ARTIFACTS }}/'
-          PLUGIN_TARGET: '/arduino-ide/changelog'
-          PLUGIN_BUCKET: ${{ secrets.DOWNLOADS_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      # - name: Publish Changelog [S3]
+      #   uses: docker://plugins/s3
+      #   env:
+      #     PLUGIN_SOURCE: '${{ env.CHANGELOG_ARTIFACTS }}/*'
+      #     PLUGIN_STRIP_PREFIX: '${{ env.CHANGELOG_ARTIFACTS }}/'
+      #     PLUGIN_TARGET: '/arduino-ide/changelog'
+      #     PLUGIN_BUCKET: ${{ secrets.DOWNLOADS_BUCKET }}
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
